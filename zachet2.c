@@ -43,20 +43,19 @@ if((a<=0)||(b<=0)){
             fscanf(input_file, "%d",&(arr[i][j]));
         }
     }
-    for(i=0;i<a-1;i++){
+    for(i=0;i<a;i++){
         for(u=0;u<a-1;u++){
-            for(j=0;j<b;j++){
             if(arr[i][0]>=arr[i+1][0]){
-                for(u=0;u<a-1;u++){
+                for(j=0;j<b;j++){
                     tmp=arr[u+1][j];
                     arr[u][j]=arr[u+1][j];
-                    arr[u+1][j=tmp;
+                    arr[u+1][j]=tmp;
                 }
             }
         }
     
     }
-    }
+    
     for(int i=0;i<a;i++){
         for(int j=0;j<b;j++){
             fprintf(output_file,"%d ",arr[i][j]);
