@@ -4,7 +4,6 @@
 int main(){
     int**arr;
 int a,b,i,j;
-int p,l;
 int q=0;
 int tmp;
 int u;
@@ -19,8 +18,6 @@ if(!input_file){
 
 fscanf(input_file,"%d",&a);
 fscanf(input_file,"%d",&b);
-l=a+1;
-p=b+1;
 if((a<=0)||(b<=0)){
         printf("Oshibka s razmerom\n");
         exit(4);
