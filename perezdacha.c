@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <malloc.h>
 int main(){
-    double**arr;
+    int**arr;
 int a,b,i,j;
 int p,l;
 int q=0;
@@ -25,13 +25,13 @@ if((a<=0)||(b<=0)){
         printf("Oshibka s razmerom\n");
         exit(4);
     }
-    arr=(double**)malloc(a*sizeof(double*));
+    arr=(int**)malloc(a*sizeof(int*));
     if(arr==NULL){
         printf("Oshibka s pamyatiu\n");
         exit(1);
     }
     for(i=0;i<a;i++){
-        arr[i]=(double*)malloc(b*sizeof(double));
+        arr[i]=(int*)malloc(b*sizeof(int));
         if(arr[i]==NULL){
             printf("Oshibka s pamyatiu1\n");
             for(int m=0;m<i;i++){
@@ -42,7 +42,7 @@ if((a<=0)||(b<=0)){
     }
     for(i=0;i<a;i++){
         for(j=0;j<b;j++){
-            fscanf(input_file, "%lf",&(arr[i][j]));
+            fscanf(input_file, "%d",&(arr[i][j]));
         }
     }
     for(i=0;i<a;i++){
@@ -58,7 +58,7 @@ if((a<=0)||(b<=0)){
     }
     for(int i=0;i<a;i++){
         for(int j=0;j<b;j++){
-            fprintf(output_file,"%lf ",arr[i][j]);
+            fprintf(output_file,"%d ",arr[i][j]);
             if(j==b-1){
                 fprintf(output_file,"\n");
             }
